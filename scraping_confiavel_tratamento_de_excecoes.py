@@ -2,6 +2,16 @@ from urllib.request import urlopen
 from urllib.error import HTTPError, URLError
 from bs4 import BeautifulSoup
 
+''' 
+    É frustrante deixar um scraper funcionando ao encerrar o espediente e no dia seguinte você esperava que 
+    os dados estariam no seu banco de dados para uso, porem é surpriendido quando vê que houve um erro no meio 
+    da noite que parou toda a execução do seu scraper. Isso acontece com muita frequencia uma vez que os dados 
+    da internet estão mal formatados ou até mesmo um fechamento errado de uma tag, por isso o tratamento de 
+    exceções é primordial.
+    
+    Este script visa demosntra alguns cuidados que se deve tomar ao trabalhar com scraping.
+'''
+
 try:
     # html = urlopen("https://site_nao_existe.com.br") # Forçando erro URLError
     # html = urlopen("http://pythonscraping.com/pages/page1.html") # Forçando o sucesso
